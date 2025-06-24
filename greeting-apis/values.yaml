@@ -16,4 +16,5 @@ rails:
   secretKeyBase: a24a513535dffd2f5611ff86d70592cb
 
 ingress:
+  enabled: true
   host: apis.balen.krd
