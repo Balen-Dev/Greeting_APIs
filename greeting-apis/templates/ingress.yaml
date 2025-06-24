@@ -4,32 +4,33 @@ kind: Ingress
 metadata:
   name: greeting-apis-ingress
 spec:
+  ingressClassName: nginx
   rules:
     - host: {{ .Values.ingress.host }}
       http:
         paths:
-          - path: /dotnet/
+          - path: /dotnet
             pathType: Prefix
             backend:
               service:
                 name: dotnet-api
                 port:
                   number: 80
-          - path: /go/
+          - path: /go
             pathType: Prefix
             backend:
               service:
                 name: go-api
                 port:
                   number: 80
-          - path: /nodejs/
+          - path: /nodejs
             pathType: Prefix
             backend:
               service:
                 name: nodejs-api
                 port:
                   number: 80
-          - path: /rails/
+          - path: /rails
             pathType: Prefix
             backend:
               service:
