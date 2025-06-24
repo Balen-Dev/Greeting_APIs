@@ -16,4 +16,4 @@ rails:
   secretKeyBase: a24a513535dffd2f5611ff86d70592cb
 
 ingress:
-  host: rancher.balen.krd
+  host: apis.balen.krd
