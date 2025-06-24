@@ -12,28 +12,28 @@ spec:
       http:
         paths:
           - path: /go
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: go-api
                 port:
                   number: 80
-          - path: /nodejs
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: nodejs-api
-                port:
-                  number: 80
           - path: /dotnet
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: dotnet-api
                 port:
                   number: 80
+          - path: /nodejs
+            pathType: Prefix
+            backend:
+              service:
+                name: nodejs-api
+                port:
+                  number: 80
           - path: /rails
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: rails-api
