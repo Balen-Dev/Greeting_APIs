@@ -19,7 +19,4 @@ spec:
             - containerPort: {{ .Values.rails.containerPort }}
           env:
             - name: SECRET_KEY_BASE
-              valueFrom:
-                secretKeyRef:
-                  name: rails-secret
-                  key: SECRET_KEY_BASE
+              value: {{ .Values.rails.secretKeyBase | quote }}
