@@ -16,25 +16,25 @@ spec:
           service:
             name: go-api
             port:
-              number: 8080
+              number: 80
       - path: /dotnet
         pathType: Prefix
         backend:
           service:
             name: dotnet-api
             port:
-              number: 8082
+              number: 80
       - path: /nodejs
         pathType: Prefix
         backend:
           service:
             name: nodejs-api
             port:
-              number: 8081
+              number: 80
       - path: /rails
         pathType: Prefix
         backend:
           service:
             name: rails-api
             port:
-              number: 3000
+              number: 80
