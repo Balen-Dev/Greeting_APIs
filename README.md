@@ -16,7 +16,6 @@ This Helm chart is designed to run in **Kubernetes** environments (e.g. via **Ra
 
 ```
 greeting-apis/
-├── charts/
 ├── templates/
 │   ├── go-api-deployment.yaml
 │   ├── dotnet-api-deployment.yaml
