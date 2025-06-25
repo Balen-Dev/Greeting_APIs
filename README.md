@@ -106,4 +106,4 @@ kubectl logs -f <pod-name> -n <your-namespace>
 
 ## 💬 Support
 
-Feel free to open an [issue](https://github.com/balen-dev/Greeting_APIs/issues) or submit a [pull request](https://github.com/balenabdalla/Greeting_APIs/pulls) if you have improvements or questions!
+Feel free to open an [issue](https://github.com/balen-dev/Greeting_APIs/issues) or submit a [pull request](https://github.com/balen-dev/Greeting_APIs/pulls) if you have improvements or questions!
