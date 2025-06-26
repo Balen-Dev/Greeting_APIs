@@ -4,37 +4,38 @@ metadata:
   name: greeting-apis-ingress
   namespace: greeting-apis
   annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
-  - host: apis.balen.krd
-    http:
-      paths:
-      - path: /go
-        pathType: Prefix
-        backend:
-          service:
-            name: go-api
-            port:
-              number: 80
-      - path: /dotnet
-        pathType: Prefix
-        backend:
-          service:
-            name: dotnet-api
-            port:
-              number: 80
-      - path: /nodejs
-        pathType: Prefix
-        backend:
-          service:
-            name: nodejs-api
-            port:
-              number: 80
-      - path: /rails
-        pathType: Prefix
-        backend:
-          service:
-            name: rails-api
-            port:
-              number: 80
+    - host: apis.balen.krd
+      http:
+        paths:
+          - path: /go(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: go-api
+                port:
+                  number: 80
+          - path: /dotnet(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: dotnet-api
+                port:
+                  number: 80
+          - path: /nodejs(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: nodejs-api
+                port:
+                  number: 80
+          - path: /rails(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: rails-api
+                port:
+                  number: 80
