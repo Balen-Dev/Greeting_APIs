@@ -17,12 +17,16 @@ This Helm chart is designed to run in **Kubernetes** environments (e.g. via **Ra
 ```
 greeting-apis/
 ├── templates/
-│   ├── go-api-deployment.yaml
-│   ├── dotnet-api-deployment.yaml
-│   ├── nodejs-api-deployment.yaml
-│   ├── rails-api-deployment.yaml
-│   ├── nginx-deployment.yaml
-│   └── ingress.yaml
+│   ├── dotnet-deployment.yaml
+│   ├── dotnet-service.yaml
+│   ├── go-deployment.yaml
+│   ├── go-service.yaml
+│   ├── ingress.yaml
+│   ├── nodejs-deployment.yaml
+│   ├── nodejs-service.yaml
+│   ├── rails-deployment.yaml
+│   ├── rails-secret.yaml
+│   └── rails-service.yaml
 ├── values.yaml
 ├── Chart.yaml
 ```
